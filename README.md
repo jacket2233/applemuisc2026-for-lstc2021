@@ -8,6 +8,16 @@
 
 **非官方、单版本验证；不是 Apple Music 安装包，也不是订阅或 DRM 绕过工具。** 不附带 Apple EXE/DLL、账户数据、证书或原始诊断日志。
 
+## 法律状态与免责声明（请先阅读）
+
+**本项目未获得 Apple 对此类修改/再分发的专项授权，不能保证部署行为在你的地区合法或符合你接受的许可。** 随包 Apple 许可含有复制、修改、逆向分析与再分发限制；只改 MinVersion、不改 DLL、不破解 DRM、免费或“仅供学习”均不是自动豁免。工具还会在新副本中隔离失效包签名元数据，开发模式注册不代表 Apple 认证。无法确认有权操作时，请勿执行部署。
+
+- [免责声明](DISCLAIMER.md)：具体风险、无保证、责任限制及不可排除的法定权利。
+- [法律风险审查与依据](docs/legal-review.md)：本版本随包许可、中美规则的条件与未决问题；不是律师意见。
+- [开源许可范围](LICENSING.md)：当前原创材料为 **Apache-2.0 OR MIT**；不授予 Apple / Microsoft 软件权利。
+
+当前版已移除完整 Apple 参考清单，改用自编最小测试夹具。**旧 Git 提交仍可能包含该清单，删除当前文件不等于清除历史**；尚未确认其再分发授权。免责声明不创造授权、不免除依法不得免除的责任，也不撤销以前依法授予的许可。
+
 ## 获取项目
 
 在本仓库页面选择 **Code → Download ZIP**，解压到你有写入权限的普通目录。或者使用 Git：
@@ -106,7 +116,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\deploy.ps1 -SourcePack
 - `scripts/verify-package.ps1`：只读检查已安装包；新项目副本可加 `-CheckBinaries`。
 - `scripts/verify-library-agent.ps1`：核对进程所属目录；可选 `-Launch`、有超时的 `-ProbeCom`。
 - `scripts/collect-diagnostics.ps1`：导出限定字段，避免采集账户令牌和原始 ETL。
-- `templates/AppxManifest.xml`：本机工作清单参考，**不要拿它覆盖其他版本清单**。
+- `tests/fixtures/AppxManifest.xml`：独立编写的最小模拟夹具，不是 Apple 提供的清单，不能部署；实际清单只能来自你有权使用的原包。
 - `deploy.cmd` / `deploy.ps1`：一键入口与本地预检。
 - `scripts/deployment-common.ps1`：安全解压、输入识别与依赖预检。
 - `tests/deployment-tests.ps1`：模拟部署预检与恶意 ZIP 拒绝测试。
@@ -209,6 +219,6 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tests\deployment-tests
 
 - **项目发起 / 实机反馈 / 维护：jacket2233。**
 - **AI 协作：OpenAI Codex。** 参与兼容问题排查、脚本实现、文档整理及模拟测试；项目不是 Apple、Microsoft 或 OpenAI 的官方产品，也未获得其兼容性认证。
-- 原创脚本及文档的 MIT 许可和适用范围见 [LICENSE.txt](LICENSE.txt)。仓库创建时已有的 [LICENSE](LICENSE)（Apache-2.0）原样保留；不删除或替换维护者已有的许可文件。
-- Apple 参考清单及第三方产品不因本仓库而重新许可；Apple Music、Apple、Microsoft 等商标归各自所有者。
+- 当前版本有权许可的原创脚本、文档及自编测试夹具采用 **Apache-2.0 OR MIT**，接收者可择一；完整文本见 [LICENSE](LICENSE)、[LICENSE.txt](LICENSE.txt)，范围、历史及 AI 权利边界见 [LICENSING.md](LICENSING.md)。
+- Apple / Microsoft 软件、服务及商标不因本仓库而重新许可；当前版本不再附完整 Apple 清单。AI 协作署名不构成第三方授权、法律责任转移或官方认可。
 - 欢迎通过 Issues 提交经过脱敏的复现步骤。**不要上传安装包、Apple EXE/DLL、账户、密码、Cookies、授权文件或原始日志。**

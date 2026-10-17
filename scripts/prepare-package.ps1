@@ -4,6 +4,7 @@ param([Parameter(Mandatory=$true)][string]$SourcePackage, [string]$Destination)
 . "$PSScriptRoot\common.ps1"
 Assert-WindowsPowerShell
 Assert-HostBuild
+Show-LegalNotice
 $source = (Resolve-Path -LiteralPath $SourcePackage).Path.TrimEnd('\')
 if (-not (Test-Path -LiteralPath $source -PathType Container)) { throw '请先解压 ZIP，传入包含 AppxManifest.xml 的目录。' }
 Assert-NoReparsePoints $source

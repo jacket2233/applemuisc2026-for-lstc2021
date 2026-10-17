@@ -4,6 +4,7 @@ param([Parameter(Mandatory=$true)][string]$PackageRoot, [switch]$ReplaceExisting
 . "$PSScriptRoot\common.ps1"
 Assert-WindowsPowerShell
 Assert-HostBuild
+Show-LegalNotice
 $root = (Resolve-Path -LiteralPath $PackageRoot).Path
 $r = Get-Receipt $root
 $manifest = Join-Path $root 'AppxManifest.xml'

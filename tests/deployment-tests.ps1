@@ -8,7 +8,7 @@ Assert-HostBuild
 $temp=Join-Path $env:TEMP ('music-deploy-tests-'+[guid]::NewGuid().ToString('N'))
 $source=Join-Path $temp 'fixture'
 New-Item -ItemType Directory -Path $source -Force | Out-Null
-$text=[IO.File]::ReadAllText((Join-Path $root 'templates\AppxManifest.xml')).Replace('MinVersion="10.0.19044.0"','MinVersion="10.0.19045.0"')
+$text=[IO.File]::ReadAllText((Join-Path $root 'tests\fixtures\AppxManifest.xml')).Replace('MinVersion="10.0.19044.0"','MinVersion="10.0.19045.0"')
 [IO.File]::WriteAllText((Join-Path $source 'AppxManifest.xml'),$text)
 [IO.File]::WriteAllText((Join-Path $source 'AppleMusic.exe'),'fixture-not-executable')
 [IO.File]::WriteAllText((Join-Path $source 'AMPLibraryAgent.exe'),'fixture-not-executable')

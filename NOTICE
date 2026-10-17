@@ -1,0 +1,17 @@
+applemuisc2026-for-lstc2021
+Copyright (c) 2026 applemuisc2026-for-ltsc2021 contributors
+
+Current original project materials, to the extent contributors hold rights:
+SPDX-License-Identifier: Apache-2.0 OR MIT
+See LICENSE, LICENSE.txt and LICENSING.md for scope and historical notes.
+
+Project initiated and maintained by jacket2233, with OpenAI Codex assistance.
+AI attribution is not a claim of independent AI legal authorship or endorsement.
+Apple, Apple Music, Microsoft and Windows are third-party names/trademarks.
+No affiliation, certification or third-party software license is granted.
+
+The extracted Apple AppxManifest.xml formerly included in templates/ was
+removed from the current tree. Prior Git history may still contain it; this
+notice does not claim authorization to redistribute that historical file.
+The tests/fixtures/AppxManifest.xml file is a project-authored minimal test
+fixture, not an Apple-supplied or deployable application manifest.

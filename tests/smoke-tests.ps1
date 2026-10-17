@@ -4,7 +4,7 @@ $root=Split-Path -Parent $PSScriptRoot
 $workspace=Join-Path ([IO.Path]::GetTempPath()) ('applemusic-project-test-'+[guid]::NewGuid().ToString('N'))
 $source=Join-Path $workspace 'fixture'
 New-Item -ItemType Directory -Path $source -Force | Out-Null
-$text=[IO.File]::ReadAllText((Join-Path $root 'templates\AppxManifest.xml')).Replace('MinVersion="10.0.19044.0"','MinVersion="10.0.19045.0"')
+$text=[IO.File]::ReadAllText((Join-Path $root 'tests\fixtures\AppxManifest.xml')).Replace('MinVersion="10.0.19044.0"','MinVersion="10.0.19045.0"')
 [IO.File]::WriteAllText((Join-Path $source 'AppxManifest.xml'),$text)
 # 仅供复制和哈希单元测试的文本，不作为可运行 Apple 程序。
 [IO.File]::WriteAllText((Join-Path $source 'AppleMusic.exe'),'fixture-exe-not-executable')

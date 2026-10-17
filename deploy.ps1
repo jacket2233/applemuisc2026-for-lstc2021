@@ -13,6 +13,7 @@ $ErrorActionPreference='Stop'
 try {
     Assert-WindowsPowerShell
     Assert-HostBuild
+    Show-LegalNotice
     $sid=[Security.Principal.WindowsIdentity]::GetCurrent().User.Value
     if ($sid -in @('S-1-5-18','S-1-5-19','S-1-5-20')) { throw '不要用 SYSTEM/服务账户部署；请使用实际桌面用户。' }
     Write-Host ('部署用户：'+[Security.Principal.WindowsIdentity]::GetCurrent().Name)

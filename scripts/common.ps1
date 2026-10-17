@@ -76,3 +76,7 @@ function Assert-BinaryInventory([string]$PackageRoot, $Receipt) {
         }
     }
 }
+function Show-LegalNotice {
+    Write-Warning '非官方兼容工具：Apple 许可限制修改/再分发；本项目未获专项授权，管理员权限或研究用途不等于合法。'
+    Write-Warning '会修改新副本清单并隔离失效包签名元数据；保留包身份不表示 Apple 认证。请先阅读 DISCLAIMER.md、LICENSING.md 和 docs/legal-review.md；无法确认有权操作时停止。'
+}
