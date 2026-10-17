@@ -1,0 +1,14 @@
+﻿logs/*
+!logs/.gitkeep
+*.lnk
+*.zip
+*.etl
+*.dmp
+*.cer
+ltsc-*.json
+payload/*
+!payload/README.txt
+dependencies/*
+!dependencies/README.txt
+*.appx
+*.msix
