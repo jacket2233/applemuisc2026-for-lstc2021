@@ -1,14 +1,33 @@
-﻿logs/*
+# Generated local output and sensitive files
+logs/*
 !logs/.gitkeep
 *.lnk
 *.zip
 *.etl
 *.dmp
 *.cer
+*.pfx
+*.p12
+*.key
+*.log
+.env
+.env.*
 ltsc-*.json
+deployment.json
+# Never redistribute Apple or Microsoft installation payloads
 payload/*
 !payload/README.txt
 dependencies/*
 !dependencies/README.txt
+*.exe
+*.dll
 *.appx
 *.msix
+*.appxbundle
+*.msixbundle
+*.msi
+# Tool/editor state
+.vs/
+.vscode/
+Thumbs.db
+Desktop.ini

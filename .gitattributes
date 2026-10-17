@@ -1,0 +1,2 @@
+# Preserve exact bytes so release SHA256 hashes also match Git checkouts.
+* -text
